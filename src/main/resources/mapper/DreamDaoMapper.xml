@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.cup.demo.dao.DreamDaoMapper">
+
+    <insert id="create" parameterType="com.example.cup.demo.pojo.Dream" >
+
+        insert into dream(time,content) values (
+        #{time},#{content}
+        )
+    </insert>
+
+    <select id="find"  parameterType="java.lang.Integer">
+        select * from dream where id = #{id}
+    </select>
+</mapper>
