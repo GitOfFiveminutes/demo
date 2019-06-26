@@ -11,8 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @MapperScan("com.example.cup.demo.dao")
 @EntityScan("com.example.cup.demo.pojo")
-//@ComponentScan(basePackages = {"com.example"})
-@EnableJpaRepositories("com.example.cup.demo.dao")
+@EnableJpaRepositories("com.example.cup.demo.rep")
 public class DemoApplication {
 
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
 package com.example.cup.demo.service;
 
 import com.example.cup.demo.dao.DreamDaoMapper;
-import com.example.cup.demo.dao.DreamHRepository;
+import com.example.cup.demo.rep.DreamHRepository;
 import com.example.cup.demo.pojo.Dream;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ public class DreamManager {
     private DreamHRepository dreamHRepository;
 
     public void save(){
-        Dream dream = new Dream("","",Integer.valueOf(RandomStringUtils.randomNumeric(10)));
+        Dream dream = new Dream("","",Integer.valueOf(RandomStringUtils.randomNumeric(5)));
         dream.setContent(RandomStringUtils.randomAlphabetic(20));
         dream.setTime(String.valueOf(System.currentTimeMillis()));
         dreamDaoMapper.create(dream);
