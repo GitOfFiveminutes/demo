@@ -4,6 +4,13 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 
+/**
+ *     <!--扫描含com.mengma包下的所有注解-->
+ *     <context:component-scan base-package="com.example"/>
+ *     <!-- 使切面开启自动代理 -->
+ *     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+ */
+
 @Aspect
 public class MyAspectj {
 
